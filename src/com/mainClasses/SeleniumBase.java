@@ -13,6 +13,8 @@ public class SeleniumBase {
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 		
+		
+		//segunda alteração
 			
 		System.setProperty("webdriver.chrome.driver", "/webdrivers/chromedriver.exe");		
 		
