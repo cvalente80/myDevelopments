@@ -17,10 +17,18 @@ public class SeleniumBase {
 		System.setProperty("webdriver.chrome.driver", "/webdrivers/chromedriver.exe");		
 		
 		WebDriver driver = new ChromeDriver();
-				
+		
+		driver.get("http://formy-project.herokuapp.com/switch-window");
+		
+		
+		
+		//teste de alterações
+		//esta é a minha primeira alteração
+		
+		
 		/*
 		*Switch Window
-		*/
+		
 		
 		driver.get("http://formy-project.herokuapp.com/switch-window");
 		
@@ -37,6 +45,8 @@ public class SeleniumBase {
 		}
 		
 		driver.switchTo().window(originalHaldler);
+		
+		*/
 		
 		
 		
