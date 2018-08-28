@@ -5,7 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 
 
 public class SeleniumBase {
@@ -20,11 +22,75 @@ public class SeleniumBase {
 		
 		WebDriver driver = new ChromeDriver();
 		
+		/*
+		* DragDrop
+		*/
+		
+		driver.get("http://formy-project.herokuapp.com/dragdrop");
+		
+		WebElement image = driver.findElement(By.id("image"));
+		
+		WebElement box = driver.findElement(By.id("box"));
+		Thread.sleep(1000);
+		Actions actions = new Actions(driver);
+		
+		actions.dragAndDrop(image, box).build().perform();
+		
+		
+		
+		
+		//driver.quit();
+		
+		
+		
+		
+		
+		/*
+		* Javascript
+		* 
+		
+		driver.get("http://formy-project.herokuapp.com/modal");
+		
+		WebElement button = driver.findElement(By.id("modal-button"));
+		
+		button.click();
+		
+		WebElement closeButton = driver.findElement(By.id("close-button"));
+		
+		JavascriptExecutor js =  (JavascriptExecutor)driver;	
+		
+		
+		js.executeScript("arguments[0].click();",closeButton);
+		
+		//driver.quit();
+		
+		*/
+		
+		
+		
+		/*
+		*Switch to alert
+		
+		
+		
+		driver.get("http://formy-project.herokuapp.com/switch-window");
+		
+		WebElement alertButton = driver.findElement(By.id("alert-button"));
+		
+		alertButton.click();
+		
+		Alert alert = driver.switchTo().alert();		
+		
+		alert.accept();		
+		
+		driver.quit();
+		
+		*/
 		
 				
 		/*
 		*Switch Window
-		*/
+		*
 		
 		
 		
@@ -45,7 +111,7 @@ public class SeleniumBase {
 		
 		driver.switchTo().window(originalHaldler);
 		
-		
+		*/
 		
 		
 		/*
